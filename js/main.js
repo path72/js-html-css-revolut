@@ -27,6 +27,6 @@ function navMenuInit() {
 		$(this).children('a:not(:last-child)').css({ 'color':'var(--grey)' });
 	});
 	
-
 }
+
 

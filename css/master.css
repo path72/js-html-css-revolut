@@ -47,12 +47,10 @@ header ul.nav li {
 	height: 30px;
 	line-height: 30px;
 	margin-top: 40px;
+	padding: 0 10px;
 }
 header ul.nav li:hover {
 	cursor: pointer;
-}
-header ul.nav li:not(:last-child) {
-	margin-right: 15px;
 }
 header ul.nav img {
 	height: 100%;
@@ -63,6 +61,17 @@ header ul.nav .nav_btn {
 	color: white;
 	padding: 10px 15px;
 	border-radius: 20px;
+}
+header ul.nav .nav_btn:hover {
+	background-color: white;
+	color: var(--purple);
+	border: 1px solid var(--purple);
+	padding: 10px 14px;
+}
+header select {
+	border: none;
+	color: var(--grey);
+	outline: none; 
 }
 
 /* NAV SECONDO LIVELLO */
@@ -77,8 +86,11 @@ header ul.nav_menu.active {
 	display: flex;
 }
 header ul.nav_menu li {
-	margin-top: 0px;
-	min-width: 90px;
+	margin: 0px;
+	white-space: nowrap;
+}
+header ul.nav_menu li:hover a {
+	color: var(--black);
 }
 
 /****************************************************************
