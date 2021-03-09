@@ -1,7 +1,7 @@
 //###################################################### 
 // DYNAMICS
 
-$(document).ready(function() {
+$(function() {
 // ********************* doc ready start ***
 
 
@@ -16,17 +16,16 @@ navMenuInit();
 // FUNCTIONS
 
 function navMenuInit() {
-
-	$('.nav').last().children('li').mouseenter(function() {
-		$(this).children('.nav_menu').toggleClass('active');
-		$(this).children('a:not(:last-child)').css({ 'color':'var(--black)' });
-	});
-	
-	$('.nav').last().children('li').mouseleave(function() {
-		$(this).children('.nav_menu').toggleClass('active');
-		$(this).children('a:not(:last-child)').css({ 'color':'var(--grey)' });
-	});
-	
+	$('.nav').last().children('li').hover(
+		function() {
+			$(this).children('.nav_menu').toggleClass('active');
+			$(this).children('a:not(:last-child)').css({ 'color':'var(--black)' });
+		},
+		function() {
+			$(this).children('.nav_menu').toggleClass('active');
+			$(this).children('a:not(:last-child)').css({ 'color':'var(--grey)' });
+		}
+	);
 }
 
 
